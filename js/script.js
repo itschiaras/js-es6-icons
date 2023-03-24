@@ -131,8 +131,8 @@ function createCards () {
         <div class="col mb-3">
             <div class="card">
                 <div class="card-body text-center d-flex flex-column">
-                    <span id="icon"><i class="fa-solid fa-cat"></i></span>
-                    <span id="icon-text">Cat</span>
+                    <span id="icon"><i class="${icon.prefix}${icon.family}  ${icon.prefix}${icon.name}"></i></span>
+                    <span id="icon-text">${icon.name}</span>
                 </div>
             </div>
         </div>`
