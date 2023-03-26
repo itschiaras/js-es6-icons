@@ -123,10 +123,11 @@ const icons = [
 
 //creo la variabile per prendere il container dove inseriro le cards
 const iconContainer = document.querySelector('.row');
+console.log(iconContainer);
 
 // funzione per creare il template delle cards e stamparle nell'HTML
-function createCards () {
-    icons.forEach(icon => {
+function createCards (_newArr) {
+    _newArr.forEach(icon => {
         iconContainer.innerHTML += `
         <div class="col mb-3">
             <div class="card">
@@ -139,7 +140,7 @@ function createCards () {
     });
 }
 
-createCards();
+createCards(icons);
 
 
 // variabile per prendere la select e aggiungere ad essa l'evento
