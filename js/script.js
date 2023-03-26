@@ -125,7 +125,7 @@ const icons = [
 const iconContainer = document.querySelector('.row');
 
 // funzione per creare il template delle cards e stamparle nell'HTML
-function createCards (elem) {
+function createCards () {
     icons.forEach(icon => {
         iconContainer.innerHTML += `
         <div class="col mb-3">
@@ -141,6 +141,7 @@ function createCards (elem) {
 
 createCards();
 
+
 // variabile per prendere la select e aggiungere ad essa l'evento
 const typeSelector = document.getElementById("typeSelector");
 typeSelector.addEventListener("change", filterOption);
@@ -149,10 +150,10 @@ function filterOption() {
   iconContainer.innerHTML = '';
   let selectedType = typeSelector.value;
   let filteredIcons = icons.filter((icon) => {
-    if (selectedType == "all") {
+    if (selectedType === "all") {
         return true;
     } else {
-        return icon.type == selectedType;
+        return icon.type === selectedType;
     }
   });
     console.log(filteredIcons);
